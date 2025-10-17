@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: Tahoma;
+    background-color: darkgray;
+}
+
+.header {
+    width: 100%;
+    background-color: burlywood;
+    margin: 0 auto;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+h1 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.section-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 4rem 1rem;
+    line-height: 1.3rem;
+    margin: 50px auto;
+    
+}
+
+.section-grid .section {
+    display: flex;
+    background-color: rgb(222, 228, 226);
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 10px;
+    height: 300px;
+
+}
+.section a {
+    text-align: center;
+    text-decoration: none;
+    color: chocolate;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+}
+.section-grid h2 {
+    text-align: center;
+
+}
+
+
+.section-doacoes {
+    background-color: rgb(88, 86, 82);
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    width: 100%;
+    margin: 50px auto;
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+    margin: 40px;
+}
+
+.voltar {
+    padding: 2rem 2rem;
+}
+.voltar a {
+    
+    color: rgb(48, 16, 16);
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+}
