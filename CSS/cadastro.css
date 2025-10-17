@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(148, 137, 74);
+}
+
+.pagina-cadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    max-width: 1200px;
+
+}
+
+.container {
+    text-align: center;
+    line-height: 2.5rem;
+    margin-top: 4rem;
+    max-width: 1200px;
+}
+
+.container h1 {
+    text-transform: uppercase;
+    color: azure;
+    text-shadow: 2px 2px 4px rgb(137, 151, 9);
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+}
+
+.container p {
+    font-size: 1.3rem;
+    color: azure;
+    font-weight: 600;
+    
+}
+
+.container-form {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.container-formulario {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: gainsboro;
+    width: 500px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    
+}
+.container-formulario div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.2rem;
+}
+
+
+input {
+    border-radius: 10px;
+    border: none;
+    padding: 0.3rem;
+    text-align: center;
+}
+
+.container-endereco {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: gainsboro;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    width: 500px;
+    gap: 0.5rem;
+    padding: 20px;
+    text-align: center;
+}
+
+padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: gainsboro;
+    width: 500px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
