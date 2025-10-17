@@ -267,7 +267,7 @@ text-transform: uppercase;
 }
 .galeria-fotos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   max-width: 100%;
   gap: 2rem;
   margin: 0 auto;
@@ -287,4 +287,5 @@ text-transform: uppercase;
   transition: 0.5s;
   cursor: pointer;
 } 
+
 

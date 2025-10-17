@@ -23,6 +23,7 @@ body {
     line-height: 2.5rem;
     margin-top: 4rem;
     max-width: 1200px;
+    
 }
 
 .container h1 {
@@ -38,12 +39,13 @@ body {
     font-size: 1.3rem;
     color: azure;
     font-weight: 600;
-    
+
 }
 
 .container-form {
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
     
 }
 
@@ -61,8 +63,10 @@ body {
     font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: bold;
-    
+    background-color: rgba(117, 86, 0, 0.384);
+
 }
+
 .container-formulario div {
     display: flex;
     flex-direction: column;
@@ -76,35 +80,91 @@ input {
     border: none;
     padding: 0.3rem;
     text-align: center;
+    outline: none;
+    background-color: #f3f3f3;
 }
 
 .container-endereco {
-    display: flex;
-    flex-direction: column;
     font-weight: bold;
     color: gainsboro;
     font-size: 1.5rem;
     text-transform: uppercase;
-    border: 2px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 0 auto;
     width: 500px;
+    padding: 20px;
+    background-color: rgba(117, 86, 0, 0.384);
+}
+
+.container-endereco div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+    padding: 0.3rem;
+}
+
+
+
+
+.radio {
+
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    color: gainsboro;
     gap: 0.5rem;
     padding: 20px;
+    margin: 0 auto;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: rgba(117, 86, 0, 0.384);
+}
+
+.radio legend {
+    font-size: 1.5rem;
+}
+
+.radio div {
     text-align: center;
 }
 
-padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 0 auto;
-    max-width: 1200px;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    color: gainsboro;
-    width: 500px;
-    font-size: 1.5rem;
+
+.btn {
+    text-align: center;
+}
+
+.btn1 {
+    width: 100px;
+    height: 30px;
+    background-color: darkgray;
+    color: rgb(24, 22, 22);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) ;
+    margin-bottom: 30px;
+}
+
+.btn1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) ;
+  transition: 0.5s;
+  cursor: pointer; 
+  
+}
+
+.voltar {
+    position: fixed;
+    top: 0;
+    margin-top: 15px;
+} 
+
+.voltar a {
+    color: rgb(238, 255, 4);
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 700;
     text-transform: uppercase;
-    font-weight: bold;
+    
+}
