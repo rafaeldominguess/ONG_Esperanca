@@ -34,7 +34,7 @@
 }
 
 body {
-    background-color: rgb(148, 137, 74);
+    background-color: rgb(124, 113, 51);
     max-width: 1200px;
 }
 
@@ -46,6 +46,10 @@ body {
     margin: 0 auto;
     max-width: 600px;
 
+}
+
+main {
+    margin: 0 auto;
 }
 
 .container {

@@ -154,6 +154,19 @@ footer {
     text-transform: uppercase;
 
 }
+.galeria-fotos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 100%;
+  gap: 2rem;
+  padding: 4rem;
+  justify-items: center;
+}
+
+.galeria-fotos img {
+    border-radius: 100%;
+    box-shadow: 0 10px 30px rgb(88, 32, 0);
+}
 
 @media (max-width: 768px) {
 
