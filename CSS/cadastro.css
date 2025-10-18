@@ -4,6 +4,23 @@
     box-sizing: border-box;
 }
 
+:root {
+
+    --cor-primaria: #493726;       
+    --cor-primaria-variante: #7d881e;
+    
+    --cor-secundaria-destaque: #ffd735; 
+    --cor-secundaria-fundo: #b6bb9e;   
+
+    --cor-texto-principal: #1f200d; 
+    --cor-texto-inverso: #ffffff;   
+    --cor-fundo-claro: #f8f9fa;  
+    --cor-fundo-input: #f3f3f3;  
+
+    --cor-sucesso: #28a745; 
+    --cor-erro: #dc3545;   
+}
+
 body {
     background-color: rgb(148, 137, 74);
 }

@@ -5,20 +5,37 @@
 
 }
 
+:root {
+
+    --cor-primaria: #493726;       
+    --cor-primaria-variante: #7d881e;
+    
+    --cor-secundaria-destaque: #ffd735; 
+    --cor-secundaria-fundo: #b6bb9e;   
+
+    --cor-texto-principal: #1f200d; 
+    --cor-texto-inverso: #ffffff;   
+    --cor-fundo-claro: #f8f9fa;  
+    --cor-fundo-input: #f3f3f3;  
+
+    --cor-sucesso: #28a745; 
+    --cor-erro: #dc3545;   
+}
+
 body {
     font-family: Tahoma;
-    background-color: darkgray;
+    background-color: var(--cor-texto-inverso);
 }
 
 .header {
     width: 100%;
-    background-color: burlywood;
+    background-color: var(--cor-primaria);
     margin: 0 auto;
     height: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
-
+    color: var(--cor-fundo-claro);
 }
 
 h1 {
@@ -39,21 +56,23 @@ h1 {
 
 .section-grid .section {
     display: flex;
-    background-color: rgb(222, 228, 226);
+    background-color: var(--cor-primaria);
     flex-direction: column;
     justify-content: center;
     padding: 2rem;
     border-radius: 10px;
     height: 300px;
+    color: var(--cor-fundo-claro);
 
 }
 .section a {
     text-align: center;
     text-decoration: none;
-    color: chocolate;
+    color: var(--cor-texto-inverso);
     font-weight: 700;
     text-transform: uppercase;
 }
+
 .section {
     display: flex;
     flex-direction: column;
@@ -67,8 +86,8 @@ h1 {
 
 
 .section-doacoes {
-    background-color: rgb(88, 86, 82);
-    color: aliceblue;
+    background-color: var(--cor-primaria);
+    color: var(--cor-fundo-claro);
     display: flex;
     justify-content: space-between;
     padding: 20px 20px;
@@ -86,7 +105,6 @@ footer {
     padding: 2rem 2rem;
 }
 .voltar a {
-    
     color: rgb(48, 16, 16);
     font-size: 1.2rem;
     text-decoration: none;
