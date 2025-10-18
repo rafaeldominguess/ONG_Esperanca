@@ -5,24 +5,37 @@
 }
 
 :root {
-
-    --cor-primaria: #493726;       
+    /* Variáveis de cores */
+    --cor-primaria: #493726;
     --cor-primaria-variante: #7d881e;
-    
-    --cor-secundaria-destaque: #ffd735; 
-    --cor-secundaria-fundo: #b6bb9e;   
+    --cor-secundaria-destaque: #ffd735;
+    --cor-secundaria-fundo: #b6bb9e;
+    --cor-texto-principal: #1f200d;
+    --cor-texto-inverso: #ffffff;
+    --cor-fundo-claro: #f8f9fa;
+    --cor-fundo-input: #f3f3f3;
+    --cor-sucesso: #28a745;
+    --cor-erro: #dc3545;
 
-    --cor-texto-principal: #1f200d; 
-    --cor-texto-inverso: #ffffff;   
-    --cor-fundo-claro: #f8f9fa;  
-    --cor-fundo-input: #f3f3f3;  
+    /* Variáveis de Fonte */
+    --fonte-h1: 3rem;
+    --fonte-h2: 2.20rem --fonte-h3: 2rem;
+    --fonte-p: 1.3rem;
+    --fonte-link: 1.2rem;
 
-    --cor-sucesso: #28a745; 
-    --cor-erro: #dc3545;   
+    /* Sistema de espaçamento modular (base 8px) */
+    --espaco-xxs: 4px;
+    --espaco-xs: 8px;
+    --espaco-sm: 12px;
+    --espaco-md: 16px;
+    --espaco-lg: 24px;
+    --espaco-xl: 32px;
+    --espaco-xxl: 48px;
 }
 
 body {
     background-color: rgb(148, 137, 74);
+    max-width: 1200px;
 }
 
 .pagina-cadastro {
@@ -31,7 +44,7 @@ body {
     gap: 1.5rem;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 600px;
 
 }
 
@@ -40,20 +53,21 @@ body {
     line-height: 2.5rem;
     margin-top: 4rem;
     max-width: 1200px;
-    
+
 }
 
 .container h1 {
     text-transform: uppercase;
     color: azure;
     text-shadow: 2px 2px 4px rgb(137, 151, 9);
-    font-size: 2.5rem;
+    font-size: var(--fonte-h1);
     font-weight: 800;
     margin-bottom: 1.5rem;
+    line-height: 1.1;
 }
 
 .container p {
-    font-size: 1.3rem;
+    font-size: var(--fonte-p);
     color: azure;
     font-weight: 600;
 
@@ -71,13 +85,12 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 0 auto;
-    max-width: 1200px;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     color: gainsboro;
-    width: 500px;
-    font-size: 1.5rem;
+    width: 100%;
+    font-size: var(--fonte-p);
     text-transform: uppercase;
     font-weight: bold;
     background-color: rgba(117, 86, 0, 0.384);
@@ -89,6 +102,7 @@ body {
     flex-direction: column;
     text-align: center;
     gap: 0.2rem;
+    
 }
 
 
@@ -104,13 +118,12 @@ input {
 .container-endereco {
     font-weight: bold;
     color: gainsboro;
-    font-size: 1.5rem;
+    font-size: var(--fonte-p);
     text-transform: uppercase;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 0 auto;
-    width: 500px;
-    padding: 20px;
+    width: 100%;    padding: 20px;
     background-color: rgba(117, 86, 0, 0.384);
 }
 
@@ -129,7 +142,7 @@ input {
 
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 500px;
+    width: 100%;
     color: gainsboro;
     gap: 0.5rem;
     padding: 20px;
@@ -140,7 +153,7 @@ input {
 }
 
 .radio legend {
-    font-size: 1.5rem;
+    font-size: var(--fonte-p);
 }
 
 .radio div {
@@ -159,29 +172,46 @@ input {
     color: rgb(24, 22, 22);
     border: none;
     border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) ;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
 }
 
 .btn1:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) ;
-  transition: 0.5s;
-  cursor: pointer; 
-  
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+    cursor: pointer;
+
 }
 
 .voltar {
     position: fixed;
     top: 0;
-    margin-top: 15px;
-} 
+    margin: 15px 0px 0px 15px;
+}
 
 .voltar a {
     color: rgb(238, 255, 4);
-    font-size: 1.2rem;
+    font-size: var(--fonte-link);
     text-decoration: none;
     font-weight: 700;
     text-transform: uppercase;
-    
+
+}
+
+
+@media (max-width: 768px) {
+ .container h1 {
+    font-size: 2rem;
+}
+    .container p {
+        font-size: 1.0rem;
+        line-height: 1.2;
+        margin-bottom: 10px;
+
+    }
+
+    .voltar  {
+        text-align: center;
+    }
 }

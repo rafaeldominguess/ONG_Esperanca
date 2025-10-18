@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ONG Brasil Esperança</title>
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -18,7 +18,9 @@
                 <p id="descricao-principal1">Transformando vidas através da solidariedade</p>
             </div>
             <!-- Navegação principal -->
-
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                ☰
+            </button>
             <ul id="menu">
                 <li><a href="index.html" aria-label="Página Principal">INÍCIO</a></li>
                 <li><a href="#projetos" aria-label="Página de Projetos">PROJETOS</a></li>
@@ -157,7 +159,14 @@
     <footer>
         <p>&copy; 2024 Instituto Esperança. Todos os direitos reservados.</p>
     </footer>
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
 
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
+</script>
 </body>
 
 </html>
