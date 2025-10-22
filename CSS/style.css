@@ -341,6 +341,11 @@ footer {
   cursor: pointer;
 }
 
+.btn:focus {
+  outline: 3px solid rgba(255, 215, 53, 0.4); /* amarelo mostarda suave */
+  outline-offset: 2px;
+}
+
 @media (max-width: 768px) {
     header {
       height: 100px;

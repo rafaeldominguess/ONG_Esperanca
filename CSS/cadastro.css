@@ -219,6 +219,20 @@ input {
   border-left: 4px solid var(--danger);
 }
 
+.btn1:active {
+  background-color: rgb(200, 255, 207);
+  
+}
+
+/* Disabled → botão inativo */
+.btn1:disabled {
+  background-color: gray;
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
 
 @media (max-width: 768px) {
  .container h1 {
