@@ -234,6 +234,67 @@ input {
     transform: none;
 }
 
+/* pra  quando o usuário não preencher o formulário corretamente */
+input:invalid,
+textarea:invalid {
+    border: 2px solid #dc2626;
+    /* vermelho */
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
+}
+
+/* pra  quando o usuário preencher o formulário corretamente */
+input:valid,
+textarea:valid {
+    border: 2px solid #16a34a;
+    /* verde */
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.15);
+}
+
+/* pra quando o usuário clicar no campo */
+input:focus,
+textarea:focus {
+    outline: none;
+    border: 2px solid var(--cor-secundaria-destaque);
+}
+
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--cor-primaria);
+    color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: none;
+    z-index: 1000;
+}
+
+/* Quando adiciona a classe "show", anima a aparição e o sumiço */
+.toast.show {
+    animation: toastSlide 4s ease forwards;
+}
+
+@keyframes toastSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    10%,
+    90% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
 
 @media (max-width: 768px) {
     .container h1 {

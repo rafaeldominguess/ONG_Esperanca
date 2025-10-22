@@ -330,6 +330,45 @@ footer {
   cursor: pointer;
 }
 
+.menu-item {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--cor-secundaria-fundo);
+  border-radius: 10px;
+  min-width: 220px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  padding: 0.5rem 0;
+  z-index: 100;
+}
+
+.submenu li {
+  list-style: none;
+}
+
+.submenu a {
+  display: block;
+  padding: 0.6rem 1rem;
+  color: var(--cor-texto-principal);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.submenu a:hover {
+  background-color: var(--cor-primaria-variante);
+  color: #fff;
+  height: 40px;
+}
+
+.menu-item:hover .submenu {
+  display: block;
+}
+
 
 /* Botão hamburguer (visível só no celular) */
 .menu-toggle {
@@ -517,6 +556,7 @@ footer {
     color: var(--cor-fundo-claro);
     width: 100%;
     font-size: 0.7rem;
+  
   }
 
   .projetos h2 {

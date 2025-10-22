@@ -17,13 +17,20 @@
                 <h1 id="titulo-pagina">ONG Brasil Esperança</h1>
                 <p id="descricao-principal1">Transformando vidas através da solidariedade</p>
             </div>
-            <!-- Navegação principal -->
+            <!-- Navegação principal --> <!-- Botão Hamburger -->
             <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
                 ☰
             </button>
             <ul id="menu">
                 <li><a href="index.html" aria-label="Página Principal">INÍCIO</a></li>
-                <li><a href="#projetos" aria-label="Página de Projetos">PROJETOS</a></li>
+                <!-- Submenu Dropdown -->
+                <li class="menu-item">
+                    <a href="#">PROJETOS ▾</a>
+                    <ul class="submenu">
+                        <li><a href="projetos-sociais.html">DOAÇÕES</a></li>
+                        <li><a href="cadastro.html">CADASTRO</a></li>
+                    </ul>
+                </li>
                 <li><a href="cadastro.html" aria-label="Página de Cadastro">CADASTRO</a></li>
                 <li><a href="projetos-sociais.html" aria-label="Página de Doações">DOAÇÕES</a></li>
                 <li><a href="#informacoes" aria-label="informacoes">INFORMAÇÕES</a></li>
@@ -144,7 +151,7 @@
                     <p>Email: contato@ongbrasilesperanca.com.br</p>
                 </div>
 
-                <div class="mapa">
+                <div class="mapa"> <!-- Mapa incorporado do Google Maps -->
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14704.514710513371!2d-43.47014094458007!3d-22.8717045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99602a74114a15%3A0xb5d085b1ba398c06!2sONG%20Brasil%20Esperan%C3%A7a%20entregas%20de%20cestas!5e0!3m2!1spt-BR!2sbr!4v1760487815223!5m2!1spt-BR!2sbr"
                         width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy"
@@ -158,14 +165,14 @@
     <footer>
         <p>&copy; 2024 Instituto Esperança. Todos os direitos reservados.</p>
     </footer>
-<script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const menu = document.getElementById('menu');
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
 
-  menuToggle.addEventListener('click', () => {
-    menu.classList.toggle('show');
-  });
-</script>
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('show');
+        });
+    </script>
 </body>
 
 </html>
