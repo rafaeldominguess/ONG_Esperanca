@@ -43,7 +43,8 @@ body {
 }
 
 .header {
-max-width: 2200px;    background-color: var(--cor-primaria);
+    max-width: 2200px;
+    background-color: var(--cor-primaria);
     margin: 0 auto;
     height: 4rem;
     display: flex;
@@ -109,7 +110,7 @@ h1 {
     text-align: center;
     font-size: var(--fonte-h2);
     line-height: 2.1rem;
-    
+
 }
 
 
@@ -154,13 +155,14 @@ footer {
     text-transform: uppercase;
 
 }
+
 .galeria-fotos {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  max-width: 100%;
-  gap: 2rem;
-  padding: 4rem;
-  justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 100%;
+    gap: 2rem;
+    padding: 4rem;
+    justify-items: center;
 }
 
 .galeria-fotos img {
@@ -171,25 +173,31 @@ footer {
 @media (max-width: 768px) {
 
     .section-doacoes {
-        font-size: 14px ;
+        font-size: 14px;
     }
 
     .section-doacoes h2 {
-        font-size: 16px ;
+        font-size: 16px;
     }
-    
+
     .galeria-fotos {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  max-width: 100%;
-  gap: 2rem;
-  padding: 4rem;
-  justify-items: center;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 100%;
+        gap: 2rem;
+        padding: 4rem;
+        justify-items: center;
+
+    }
+
 
 }
 
-@media (min-width:480px) { ... }   
-@media (min-width:768px) { ... }  
-@media (min-width:1024px) { ... } 
-@media (min-width:1280px) { ... }  
-@media (min-width:1440px) { ... }  
+/* Não precisei usar pois o site já está responsivo */
+@media (max-width: 480px) {}
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 1280px) {}
+
+@media (max-width: 1440px) {}

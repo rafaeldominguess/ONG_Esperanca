@@ -81,7 +81,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    
+
 }
 
 .container-formulario {
@@ -106,7 +106,7 @@ main {
     flex-direction: column;
     text-align: center;
     gap: 0.2rem;
-    
+
 }
 
 
@@ -127,7 +127,8 @@ input {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 0 auto;
-    width: 100%;    padding: 20px;
+    width: 100%;
+    padding: 20px;
     background-color: rgba(117, 86, 0, 0.384);
 }
 
@@ -204,40 +205,41 @@ input {
 }
 
 .alert {
-  padding: var(--sp-2);
-  border-radius: 8px;
-  margin-bottom: var(--sp-2);
+    padding: var(--sp-2);
+    border-radius: 8px;
+    margin-bottom: var(--sp-2);
 }
 
 .alert--success {
-  background: rgba(22,163,74,0.08);
-  border-left: 4px solid var(--success);
+    background: rgba(22, 163, 74, 0.08);
+    border-left: 4px solid var(--success);
 }
 
 .alert--danger {
-  background: rgba(220,38,38,0.06);
-  border-left: 4px solid var(--danger);
+    background: rgba(220, 38, 38, 0.06);
+    border-left: 4px solid var(--danger);
 }
 
 .btn1:active {
-  background-color: rgb(200, 255, 207);
-  
+    background-color: rgb(200, 255, 207);
+
 }
 
 /* Disabled → botão inativo */
 .btn1:disabled {
-  background-color: gray;
-  opacity: 0.5;
-  cursor: not-allowed;
-  box-shadow: none;
-  transform: none;
+    background-color: gray;
+    opacity: 0.5;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
 }
 
 
 @media (max-width: 768px) {
- .container h1 {
-    font-size: 2rem;
-}
+    .container h1 {
+        font-size: 2rem;
+    }
+
     .container p {
         font-size: 1.0rem;
         line-height: 1.2;
@@ -245,7 +247,17 @@ input {
 
     }
 
-    .voltar  {
+    .voltar {
         text-align: center;
     }
 }
+
+
+/* Não precisei usar pois o site já está responsivo */
+@media (max-width: 480px) {}
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 1280px) {}
+
+@media (max-width: 1440px) {}
