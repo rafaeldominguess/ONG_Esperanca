@@ -13,14 +13,24 @@
 
 <body>
     <main> <!-- Página onde contém a inscrição para fazer parte da ONG -->
-        
-            <div class="container">
-                <h1>Inscreva-se como voluntário</h1>
-                <p>Preencha o formulário abaixo para fazer parte da ONG Brasil Esperança.</p>
-            </div>
-<section class="pagina-cadastro">
+
+        <div class="container">
+            <h1>Inscreva-se como voluntário</h1>
+            <p>Preencha o formulário abaixo para fazer parte da ONG Brasil Esperança.</p>
+        </div>
+
+        <!-- ALERTAS -->
+        <div class="alert alert--success" id="alert-sucesso" style="display:none;">
+            ✅ Cadastro realizado com sucesso!
+        </div>
+
+        <div class="alert alert--danger" id="alert-erro" style="display:none;">
+            ❌ Erro ao enviar o formulário. Verifique os dados e tente novamente.
+        </div>
+
+        <section class="pagina-cadastro">
             <!-- Formulário para fazer parte da ONG -->
-            <form class="container-form" action="#">
+            <form class="container-form" onsubmit="return enviarFormulario(event)">
                 <fieldset class="container-formulario">
                     <legend>Dados Pessoais</legend>
                     <div>
@@ -75,20 +85,20 @@
 
                         <input type="radio" name="atualizacoes" id="nao" value="nao" required>
                         <label for="nao">Não</label>
-                        </div>
+                    </div>
                 </fieldset>
-                
+
                 <div class="btn">
                     <button class="btn1" type="submit">Voluntário!</button>
                 </div>
 
-                
+
 
             </form>
         </section>
         <div class="voltar">
-                    <a href="index.html">Voltar para a página inicial</a>
-                </div>
+            <a href="index.html">Voltar para a página inicial</a>
+        </div>
     </main>
 </body>
 

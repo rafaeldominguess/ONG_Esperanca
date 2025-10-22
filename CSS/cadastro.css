@@ -35,7 +35,7 @@
 
 body {
     background-color: rgb(124, 113, 51);
-    max-width: 1200px;
+    max-width: 2200px;
 }
 
 .pagina-cadastro {
@@ -56,7 +56,7 @@ main {
     text-align: center;
     line-height: 2.5rem;
     margin-top: 4rem;
-    max-width: 1200px;
+    max-width: 2200px;
 
 }
 
@@ -201,6 +201,22 @@ input {
     font-weight: 700;
     text-transform: uppercase;
 
+}
+
+.alert {
+  padding: var(--sp-2);
+  border-radius: 8px;
+  margin-bottom: var(--sp-2);
+}
+
+.alert--success {
+  background: rgba(22,163,74,0.08);
+  border-left: 4px solid var(--success);
+}
+
+.alert--danger {
+  background: rgba(220,38,38,0.06);
+  border-left: 4px solid var(--danger);
 }
 
 
