@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ONG Brasil Esperança</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="css/doacoes.css">
 </head>
-
 <body>
 
-    <!-- Cabeçalho da página -->
     <header id="header">
         <nav class="navbar">
             <div class="logo">
@@ -22,154 +21,30 @@
                 ☰
             </button>
             <ul id="menu">
-                <li><a href="index.html" aria-label="Página Principal">INÍCIO</a></li>
+                <li><a href="#inicio" aria-label="Página Principal">INÍCIO</a></li>
                 <!-- Submenu Dropdown -->
                 <li class="menu-item">
                     <a href="#">PROJETOS ▾</a>
                     <ul class="submenu">
-                        <li><a href="projetos-sociais.html">DOAÇÕES</a></li>
-                        <li><a href="cadastro.html">CADASTRO</a></li>
+                        <li><a href="#projetos-sociais">DOAÇÕES</a></li>
+                        <li><a href="#cadastro">CADASTRO</a></li>
                     </ul>
                 </li>
-                <li><a href="cadastro.html" aria-label="Página de Cadastro">CADASTRO</a></li>
-                <li><a href="projetos-sociais.html" aria-label="Página de Doações">DOAÇÕES</a></li>
+                <li><a href="#cadastro" aria-label="Página de Cadastro">CADASTRO</a></li>
+                <li><a href="#projetos-sociais" aria-label="Página de Doações">DOAÇÕES</a></li>
                 <li><a href="#informacoes" aria-label="informacoes">INFORMAÇÕES</a></li>
                 <li><a href="#localizacao" aria-label="localizacao">LOCALIZAÇÃO</a></li>
             </ul>
         </nav>
     </header>
 
+    <main id="app-container"></main>
 
-
-    <!-- Conteúdo principal -->
-    <main id="main">
-        <section class="introduction">
-            <div class="initial-introduction">
-                <h2>Bem-vindo a ONG Brasil Esperança</h2>
-                <p>Nosso compromisso é ajudar comunidades carentes através de diversos projetos
-                    sociais. Junte-se a nós
-                    nessa missão!</p>
-                <div>
-                    <a href="#sobre" class="btn">Saiba Mais</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="sobre" class="sobre">
-            <div class="container">
-                <h2>Sobre Nós</h2>
-                <p>A ONG Brasil Esperança é uma organização não governamental dedicada a promover o bem-estar social
-                    e o desenvolvimento sustentável em comunidades vulneráveis. Fundado em 2010, nosso trabalho abrange
-                    diversas áreas, incluindo educação, saúde, meio ambiente e assistência social.</p>
-            </div>
-        </section>
-
-        <!-- Seção com informações detalhadas sobre a ONG -->
-        <section id="informacoes" class="informacoes">
-            <h2>Informações:</h2>
-            <div class="container">
-                <div class="informacoes-grid">
-                    <article class="info-card">
-                        <h2>Missão</h2>
-                        <p>Promover a transformação social por meio de ações solidárias, educativas e sustentáveis,
-                            contribuindo
-                            para o bem-estar e o desenvolvimento das comunidades.</p>
-                    </article>
-
-                    <article class="info-card">
-                        <h2>Visão</h2>
-                        <p>Ser reconhecida como uma organização de referência no impacto social positivo, inspirando a
-                            construção de uma sociedade mais justa, humana e igualitária.</p>
-                    </article>
-
-                    <article class="info-card">
-                        <h2>Valores</h2>
-                        <p>Ética, transparência, empatia, respeito, comprometimento e trabalho coletivo — princípios que
-                            orientam todas as nossas ações e decisões.</p>
-                    </article>
-
-                    <article class="info-card">
-                        <h2>Histórico e Conquistas</h2>
-                        <p>Desde a nossa fundação, temos trabalhado incansavelmente para promover mudanças positivas nas
-                            comunidades que atendemos. Nossas conquistas incluem a implementação de programas
-                            educacionais,
-                            campanhas de saúde e iniciativas de sustentabilidade que impactaram milhares de vidas.</p>
-                    </article>
-
-                    <article class="info-card">
-                        <h2>Equipe e Estrutura Organizacional</h2>
-                        <p>Nossa equipe é composta por profissionais dedicados e voluntários apaixonados pela causa
-                            social.
-                            Contamos com uma estrutura organizacional eficiente que nos permite planejar, executar e
-                            monitorar nossos projetos de forma eficaz.</p>
-                    </article>
-
-                    <article class="info-card">
-                        <h2>Relatórios de Transparência</h2>
-                        <p>Comprometidos com a transparência, disponibilizamos relatórios anuais detalhando nossas
-                            atividades,
-                            finanças e impacto social. Acreditamos que a confiança é fundamental para fortalecer nossa
-                            relação
-                            com apoiadores, parceiros e a comunidade.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="projetos" class="projetos">
-            <h2>Projetos:</h2>
-            <!-- Galeria de fotos responsivas (Imagens ilustrativas)-->
-            <div class="galeria-fotos"> <!-- Width e height para deixar o tamanho mais organizado no site -->
-                <img src="img/1.jpg" width="100" height="100" alt="Várias cestas básicas" loading="lazy">
-                <img src="img/2.jpg" width="100" height="100" alt="Distribuição de cestas básicas" loading="lazy">
-                <img src="img/3.jpg" width="100" height="100" alt="Acolhimento de pessoas em situação de rua"
-                    loading="lazy">
-                <img src="img/4.jpg" width="100" height="100" alt="Atividades recreativas para crianças" loading="lazy">
-                <img src="img/5.jpg" width="100" height="100" alt="Oficina de capacitação profissional" loading="lazy">
-                <img src="img/6.jpg" width="100" height="100" alt="Campanha de arrecadação de alimentos" loading="lazy">
-                <img src="img/7.jpg" width="100" height="100" alt="Alimentos Embalados" loading="lazy">
-                <img src="img/8.jpg" width="100" height="100" alt="Distribuição de alimentos" loading="lazy">
-                <img src="img/9.jpg" width="100" height="100" alt="Cestas básicas" loading="lazy">
-                <img src="img/10.jpg" width="100" height="100" alt="Crianças recebendo alimentos" loading="lazy">
-                <img src="img/11.jpg" width="100" height="100" alt="Alimentos" loading="lazy">
-                <img src="img/12.jpg" width="100" height="100" alt="Ações comunitárias" loading="lazy">
-                <img src="img/13.jpg" width="100" height="100" alt="Produtos embalados" loading="lazy">
-                <img src="img/14.jpg" width="100" height="100" alt="Mulher recebendo alimentos" loading="lazy">
-                <img src="img/15.jpg" width="100" height="100" alt="Mulheres trabalhando em equipe" loading="lazy">
-                <img src="img/16.jpg" width="100" height="100" alt="Feira de alimentos" loading="lazy">
-                <img src="img/17.jpg" width="100" height="100" alt="Crianças distribuindo alimentos" loading="lazy">
-                <img src="img/18.jpg" width="100" height="100" alt="Alimentos" loading="lazy">
-                <img src="img/19.jpg" width="100" height="100" alt="Alimentos separados" loading="lazy">
-                <img src="img/20.jpg" width="100" height="100" alt="Ação Solidária" loading="lazy">
-            </div>
-        </section>
-
-        <!-- Seção informando a localização da ONG -->
-        <section id="localizacao" class="localizacao">
-            <div class="container">
-                <h2>Localização</h2>
-                <div class="localizacao-info">
-                    <p>Endereço: R. Figueiredo Camargo, 137 - Bangu, Rio de Janeiro - RJ, CEP - 21875-020</p>
-                    <p>Celular: (21) 99999-9999</p>
-                    <p>Email: contato@ongbrasilesperanca.com.br</p>
-                </div>
-
-                <div class="mapa"> <!-- Mapa incorporado do Google Maps -->
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14704.514710513371!2d-43.47014094458007!3d-22.8717045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99602a74114a15%3A0xb5d085b1ba398c06!2sONG%20Brasil%20Esperan%C3%A7a%20entregas%20de%20cestas!5e0!3m2!1spt-BR!2sbr!4v1760487815223!5m2!1spt-BR!2sbr"
-                        width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
+     <footer>
         <p>&copy; 2024 Instituto Esperança. Todos os direitos reservados.</p>
     </footer>
 
-    <script id="app" src="js/script.js"></script>
-    
-</body>
+    <script src="js/script.js"></script>
 
+</body>
 </html>
