@@ -59,34 +59,6 @@ Este projeto aplica conceitos de:
 ├── index.html # Ponto de entrada da aplicação
 └── README.md # Documentação do projeto
 
-## ⚙️ Como Executar
-
-1. **Clone o repositório**
-   ```bash
-   git clone https://github.com/rafaeldominguess/ong-brasil-esperanca.git
-Acesse a pasta
-
-bash
-Copiar código
-cd ong-brasil-esperanca
-Execute o projeto
-
-Abra o arquivo index.html diretamente no navegador, ou
-
-Use a extensão Live Server (VS Code) para simular um ambiente local
-
-🧠 Conceitos Aplicados
-Modularização de código JavaScript
-
-Manipulação e navegação pelo DOM
-
-Criação de SPA com templates dinâmicos
-
-CSS Custom Properties (:root)
-
-Estrutura semântica com HTML5
-
-Design responsivo com media queries
 
 
 👨‍💻 Autor
