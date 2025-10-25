@@ -1040,3 +1040,91 @@ input {
         text-align: center;
     }
 }
+
+
+
+
+/* =================================
+   MODO ESCURO (DARK MODE)
+   ================================= */
+
+/* Quando o body tiver a classe .dark-mode, estas variáveis serão usadas */
+body.dark-mode {
+  /* Cores escuras - ajuste como preferir */
+  --cor-primaria: #4a2502; /* Marrom mais escuro */
+  --cor-primaria-variante: #9a9e2f; /* Verde oliva mais escuro */
+  --cor-secundaria-destaque: #ffd735; /* Mostarda (pode manter) */
+  --cor-secundaria-fundo: #4d5042; /* Fundo secundário escuro */
+  --cor-texto-principal: #f0f0f0; /* Texto principal claro */
+  --cor-texto-inverso: #1a1a1a; /* Texto inverso escuro */
+  --cor-fundo-claro: #1f1f1f; /* Fundo principal escuro */
+  --cor-fundo-input: #333333; /* Fundo de input escuro */
+
+  /* Ajuste para elementos específicos que não usam variáveis */
+  background-color: var(--cor-fundo-claro);
+}
+
+/* Faz o .info-card ficar escuro */
+body.dark-mode .info-card {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-principal);
+}
+
+/* Faz o formulário ficar escuro */
+body.dark-mode .container-formulario,
+body.dark-mode .container-endereco,
+body.dark-mode .radio {
+    background-color: var(--cor-secundaria-fundo);
+    color: var(--cor-texto-principal);
+}
+
+/* Faz o header/footer ficarem escuros */
+body.dark-mode header,
+body.dark-mode .footer {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-principal);
+}
+
+/* Ajusta links e títulos no modo escuro */
+body.dark-mode #menu a,
+body.dark-mode #titulo-pagina,
+body.dark-mode #descricao-principal1 {
+    color: var(--cor-texto-principal);
+}
+
+/* Ajusta cor do menu hamburger */
+body.dark-mode .menu-toggle {
+    color: var(--cor-fundo-claro);
+}
+
+/* Estilo do botão de alternar tema */
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--cor-fundo-claro); /* Cor do ícone */
+    font-size: 1.5rem; /* Tamanho do ícone */
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Ajusta a cor do ícone no modo escuro */
+body.dark-mode .theme-toggle {
+    color: var(--cor-secundaria-destaque); /* Amarelo mostarda */
+}
+
+/* Ajusta a posição no mobile */
+@media (max-width: 768px) {
+    .theme-toggle {
+        position: absolute;
+        top: 25px; /* Ajuste para ficar ao lado do menu hamburger */
+        right: 4.5rem; /* Posição ao lado do hamburger */
+    }
+}
