@@ -1,6 +1,5 @@
 /* ---------------------------
    MÓDULO 1: UTILIDADES / TEMPLATES
-   (O mesmo que você já tinha)
    --------------------------- */
 const Templates = (function () {
     function render(templateString, data = {}) {
@@ -22,7 +21,6 @@ const Templates = (function () {
 
 /* ---------------------------
    MÓDULO 2: UI (menu, toast, helpers)
-   (O mesmo que você já tinha)
    --------------------------- */
 const UI = (function () {
     let toastTimer = null;
@@ -65,13 +63,8 @@ const UI = (function () {
 
 /* ---------------------------
    MÓDULO 3: FORMULÁRIO (validação)
-   (O mesmo que você já tinha)
    --------------------------- */
 const FormModule = (function () {
-    // ... (Todas as suas funções: isCPF, isPhone, showFieldError, etc...) ...
-
-    // [VOU COLAR APENAS AS FUNÇÕES PRINCIPAIS PARA ENCURTAR A RESPOSTA,
-    // MAS VOCÊ DEVE MANTER O MÓDULO DE FORMULÁRIO COMPLETO AQUI]
 
     function isCPF(cpf) {
         if (!cpf) return false;
@@ -175,12 +168,11 @@ const FormModule = (function () {
         return true;
     }
 
-
     function init() {
         const form = document.querySelector('.container-form');
         if (!form) return;
 
-        // Adiciona o novalidate para garantir que nossa validação JS rode
+
         form.setAttribute('novalidate', true);
 
         const cloned = form.cloneNode(true);
@@ -212,7 +204,6 @@ const FormModule = (function () {
 })();
 
 
-// 1. OS DADOS DA GALERIA
 
 const DADOS_GALERIA = [
     { img: 'img/1.jpg', alt: 'Várias cestas básicas' },
@@ -237,18 +228,12 @@ const DADOS_GALERIA = [
     { img: 'img/20.jpg', alt: 'Famílias beneficiadas' }
 ];
 
-// 2. O TEMPLATE DE UMA ÚNICA FOTO
-// (Note as chaves {{img}} e {{alt}})
 const TEMPLATE_FOTO = `
-    <img src="{{img}}" width="100" height="100" alt="{{alt}}" loading="lazy">
+    <img src="{{img}}" width="200" height="200" alt="{{alt}}" loading="lazy">
 `;
 
 
 
-/* ---------------------------
-   MÓDULO 4: ROUTER (O Cérebro do SPA)
-   (CORRIGIDO - AGORA É UM IIFE E RETORNA 'init')
-   --------------------------- */
 const Router = (function () {
 
     // Seus templates HTML que você já copiou
@@ -355,9 +340,12 @@ const Router = (function () {
    
         `,
         cadastro: `
-     
 
-        <div class="container">
+        <div class="voltar">
+            <a href="#inicio">Voltar para a página inicial</a>
+        </div>
+
+        <div class="container-cadastro">
             <h1>Inscreva-se como voluntário</h1>
             <p>Preencha o formulário abaixo para fazer parte da ONG Brasil Esperança.</p>
         </div>
@@ -419,36 +407,29 @@ const Router = (function () {
                         <label for="nao">Não</label>
                     </div>
                 </fieldset>
-
-                <div class="btn">
-                    <button class="btn1" type="submit">Voluntário!</button>
-                </div>
-
+                <div class="btn-form">
+                     <button class="bt-form1" type="submit">Voluntário!</button>
+                 </div>
             </form>
         </section>
-        <div class="voltar">
-            <a href="#inicio">Voltar para a página inicial</a>
-        </div>
+        
   
         `,
 
         'projetos-sociais': `
-          
-        <!-- Página onde contém as informações para fazer doações -->
-        <header class="header">
-            <h1>Doações</h1>
-        </header>
+
+        <div class="container-projetos"> 
         <div class="voltar">
             <a href="#inicio">Voltar para a página inicial</a>
         </div>
-        <div class="section-grid">
+        <div class="section-grid-doacoes">
             <section class="section">
                 <h2>Sua doação faz a diferença!</h2>
                 <a href="https://www.paypal.com/donate" target="_blank" rel="noopener noreferrer">Doe Agora</a>
             </section>
 
             <section class="section">
-                <h2>Por que doar?</h2>
+                <h2>Por que doar ?</h2>
                 <p>Na ONG Brasil Esperança, acreditamos que pequenas atitudes podem gerar grandes mudanças.
                     Suas doações tornam possíveis projetos que levam educação, alimentação e dignidade a famílias em
                     situação de
@@ -469,7 +450,7 @@ const Router = (function () {
         <section class="section-doacoes">
             <h2>Formas de Doação:</h2>
             <div class="formasdecoacoes">
-                <div>
+                <div class="pix">
                     <h3>Doação via Pix</h3>
                     <p>Chave Pix: 1234567890</p>
                 </div>
@@ -493,7 +474,6 @@ const Router = (function () {
 
         <section class="galeria-fotos-grid-12">
             <div class="col-3 card">
-                <span class="badge">Novo</span>
                 <img src="img/8.jpg" alt="Projeto Esperança">
                 <h3>Projeto Esperança</h3>
                 <p>Iniciativa de inclusão social para jovens da comunidade.</p>
@@ -501,74 +481,114 @@ const Router = (function () {
             </div>
 
             <div class="col-3 card">
-                <span class="badge">Ativo</span>
                 <img src="img/6.jpg" alt="Cuidar é Amar">
                 <h3>Cuidar é Amar</h3>
                 <p>Apoio a famílias em vulnerabilidade social.</p>
                 <span class="tag">Saúde</span>
             </div>
         </section>
-
+    <div class="doacoes">
+        <p> <strong>🔒 Doação 100% segura.</strong></p>
+        <p>Cada centavo é investido com transparência e responsabilidade.</p>
+        <p>Acompanhe nossos relatórios e veja o impacto da sua contribuição.</p>
+    </div>
+</div>
+ 
    
         `
     };
 
-    // Função NOVA (CORRIGIDA) dentro do Router
-    function handleRouteChange() {
+    // Armazena a página que está carregada no momento
+    let paginaAtual = null;
+
+    // Lista de chaves que são "páginas" (trocam o conteúdo)
+    const paginasReais = ['inicio', 'cadastro', 'projetos-sociais'];
+
+    // Função que carrega o conteúdo de uma página
+    function carregarPagina(pageKey) {
         const container = document.getElementById('app-container');
         if (!container) return;
 
-        // Renomeei a chave aqui para corrigir o bug do link "Doações"
-        const hash = window.location.hash || '#inicio';
-        let pageKey = hash.substring(1);
-
-
+        // Pega o HTML do template
         const html = templates[pageKey] || `<h2>Página não encontrada</h2>`;
         container.innerHTML = html;
 
-        // PÓS-CARREGAMENTO
+        // Define a classe no container para o CSS funcionar
+        container.className = 'page-' + pageKey;
+
+        // Salva a página atual
+        paginaAtual = pageKey;
+
+
         if (pageKey === 'cadastro') {
-            FormModule.init();
+            FormModule.init(); // Ativa a validação do formulário
         }
 
-        // ===================================================
-        // PASSO 3: ADICIONE ESTE BLOCO DE CÓDIGO
-        // ===================================================
         if (pageKey === 'inicio') {
-            // 1. Encontra o container da galeria que acabamos de injetar
+            // Ativa a galeria dinâmica
             const galeriaContainer = document.getElementById('galeria-dinamica');
-
             if (galeriaContainer) {
-                // 2. Gera o HTML de todas as fotos
                 const htmlGaleria = DADOS_GALERIA.map(foto => {
-                    // *** AQUI ESTÁ VOCÊ USANDO O MÓDULO TEMPLATES ***
                     return Templates.render(TEMPLATE_FOTO, foto);
                 }).join('');
-
-                // 3. Insere o HTML gerado na página
                 galeriaContainer.innerHTML = htmlGaleria;
             }
         }
-        // ===================================================
+    }
 
-        UI.scrollToTop();
+
+    function handleRouteChange() {
+        const hash = window.location.hash || '#inicio';
+        let pageKey = hash.substring(1);
+
+        if (paginasReais.includes(pageKey)) {
+
+
+
+            if (pageKey !== paginaAtual) {
+                carregarPagina(pageKey);
+            }
+
+            UI.scrollToTop();
+
+        } else {
+
+
+            if (paginaAtual !== 'inicio') {
+
+                carregarPagina('inicio');
+
+
+                setTimeout(() => {
+                    const ancora = document.getElementById(pageKey);
+                    if (ancora) {
+                        ancora.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }, 100);
+
+            } else {
+
+                const ancora = document.getElementById(pageKey);
+                if (ancora) {
+                    ancora.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        }
     }
 
     function init() {
+        // Ouve a mudança de hash (cliques nos links #)
         window.addEventListener('hashchange', handleRouteChange);
+        // Carrega a página correta quando o site abre
         window.addEventListener('load', handleRouteChange);
     }
 
-    // ISSO ESTAVA FALTANDO:
     return { init };
 
 })();
 
 
-/* ---------------------------
-   INICIALIZAÇÃO DA APLICAÇÃO
-   (CORRIGIDO)
-   --------------------------- */
+
 
 // Ativa o menu hamburger em todas as páginas
 UI.initMenu();
