@@ -31,6 +31,8 @@ const UI = (function () {
         if (!toast) {
             toast = document.createElement('div');
             toast.className = 'spa-toast';
+            toast.setAttribute('role', 'alert');
+            toast.setAttribute('aria-live', 'assertive');
             document.body.appendChild(toast);
             Object.assign(toast.style, {
                 position: 'fixed', right: '1rem', bottom: '1rem',
@@ -135,6 +137,10 @@ const FormModule = (function () {
         const span = document.createElement('span');
         span.className = 'field-error';
         span.textContent = message;
+        const errorId = field.id + '-error'; // Cria um ID único
+        span.id = errorId;
+        field.setAttribute('aria-describedby', errorId);
+        field.setAttribute('aria-invalid', 'true');
         span.style.cssText = 'color: #b71c1c; font-size: 0.85rem; display: block; margin-top: 0.25rem;';
         field.insertAdjacentElement('afterend', span);
     }
@@ -143,6 +149,8 @@ const FormModule = (function () {
         if (next && next.classList.contains('field-error')) {
             next.remove();
         }
+        field.removeAttribute('aria-describedby');
+        field.removeAttribute('aria-invalid');
     }
     function validateForm(form) {
         let valid = true;
@@ -550,6 +558,14 @@ const Router = (function () {
 
         // Salva a página atual
         paginaAtual = pageKey;
+
+        const newHeading = container.querySelector('h1, h2');
+        if (newHeading) {
+            // Adiciona tabindex="-1" para permitir que ele receba foco
+            newHeading.setAttribute('tabindex', '-1');
+            // Move o foco para ele
+            newHeading.focus();
+        }
 
 
         if (pageKey === 'cadastro') {
