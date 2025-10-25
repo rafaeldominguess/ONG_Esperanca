@@ -1,63 +1,74 @@
-🌎 ONG Brasil Esperança
+# 🌎 ONG Brasil Esperança
 
-Site institucional desenvolvido para apresentar a ONG Brasil Esperança, uma organização dedicada à transformação social e ao apoio de comunidades carentes.
-O projeto foi construído com foco em semântica, acessibilidade e boas práticas de desenvolvimento web, utilizando apenas HTML5 e estruturação limpa de conteúdo.
+![Status](https://img.shields.io/badge/status-Em%20Desenvolvimento-ffd735?style=flat-square)
+![HTML5](https://img.shields.io/badge/HTML5-493726?logo=html5&logoColor=white&style=flat-square)
+![CSS3](https://img.shields.io/badge/CSS3-7d881e?logo=css3&logoColor=white&style=flat-square)
+![JavaScript](https://img.shields.io/badge/JavaScript-f7df1e?logo=javascript&logoColor=black&style=flat-square)
+![Licença](https://img.shields.io/badge/Licen%C3%A7a-Educacional-b6bb9e?style=flat-square)
+![Responsivo](https://img.shields.io/badge/Responsivo-✔️-7d881e?style=flat-square)
 
-📋 Objetivo do Projeto
+---
 
-O site tem como propósito divulgar as ações, valores e projetos da ONG, além de facilitar o contato com voluntários e doadores.
-Também busca fortalecer a transparência da instituição e promover a participação da comunidade nas atividades sociais.
+## 🧭 Sobre o Projeto
 
-🧱 Estrutura do Projeto
+O **ONG Brasil Esperança** é um projeto acadêmico desenvolvido na disciplina de **Desenvolvimento Web**.  
+Seu objetivo é demonstrar o uso de **JavaScript avançado** para transformar uma página estática em uma **aplicação web dinâmica e interativa**, simulando o site institucional de uma ONG fictícia.
 
-O projeto está dividido em seções que representam as principais áreas da organização:
+Este projeto aplica conceitos de:
+- **Single Page Application (SPA)**
+- **Manipulação do DOM**
+- **Validação de formulários**
+- **Design System com variáveis CSS**
+- **Responsividade e acessibilidade**
 
-🏠 Início: Apresentação da ONG e mensagem de boas-vindas.
+---
 
-📖 Sobre Nós: História e propósito da instituição.
+## 🚀 Tecnologias Utilizadas
 
-🎯 Informações: Missão, visão, valores, conquistas e estrutura organizacional.
+| Tecnologia | Descrição |
+|-------------|------------|
+| **HTML5** | Estrutura semântica das páginas |
+| **CSS3** | Estilização, Design System e responsividade |
+| **JavaScript (ES6+)** | Lógica de interação e manipulação do DOM |
+| **LocalStorage** | Armazenamento local de dados |
+| **Toast & Badges** | Feedback visual ao usuário |
+| **Modais & Templates** | Criação dinâmica de conteúdo |
 
-🤝 Projetos: Galeria de imagens com as principais ações sociais realizadas.
+---
 
-📍 Localização: Endereço, contato e mapa integrado do Google Maps.
+## 💡 Funcionalidades
 
-📜 Rodapé: Direitos autorais e informações institucionais.
+- 🔀 Navegação dinâmica via **SPA (Single Page Application)**  
+- 🧩 Sistema de **templates JavaScript**  
+- 📝 **Validação de formulários** com feedback em tempo real  
+- 💾 **Armazenamento Local (LocalStorage)** para simular persistência  
+- 🎨 **Design System** com paleta de cores em tons **marrom e mostarda**  
+- 📱 Layout **100% responsivo** com menu hambúrguer  
+- 🔔 **Toasts e Badges** informativos para feedback ao usuário  
 
-🧩 Tecnologias Utilizadas
-Tecnologia	Função
-HTML5	Estrutura semântica da página
-CSS3 (a ser aplicado)	Estilização e responsividade
-Google Maps Embed API	Exibição de mapa com localização da ONG
-Acessibilidade (ARIA labels)	Melhora da navegação por leitores de tela
-🎨 Boas Práticas Aplicadas
+---
 
-Uso de tags semânticas (header, main, section, footer);
+## 📂 Estrutura de Pastas
 
-Imagens com atributo alt para acessibilidade;
+📦 ong-brasil-esperanca
+├── 📁 assets/ # Imagens, ícones e mídias
+├── 📁 css/ # Estilos e variáveis do Design System
+├── 📁 js/ # Módulos JavaScript (SPA, validação, etc.)
+├── 📁 pages/ # Templates das páginas
+│
+├── index.html # Ponto de entrada da aplicação
+└── README.md # Documentação do projeto
 
-Links com aria-label para navegação inclusiva;
 
-IDs e âncoras funcionais para rolagem entre seções;
 
-Estrutura modular e legível, facilitando manutenção e expansão futura.
+👨‍💻 Autor
+Desenvolvido por Rafael Domingues
+🎓 Estudante de Análise e Desenvolvimento de Sistemas
+📚 Projeto acadêmico — Faculdade de Desenvolvimento Web
 
-🚀 Possíveis Melhorias Futuras
 
-Implementar CSS responsivo para melhor visualização em dispositivos móveis;
 
-Adicionar JavaScript para animações e interatividade;
+🪪 Licença
+Este projeto é de uso educacional e não possui fins comerciais.
+Sinta-se à vontade para utilizá-lo como base de estudos e aprendizado.
 
-Criar formulário de contato funcional;
-
-Integrar banco de dados para cadastro de voluntários e doações.
-
-👨‍💻 Desenvolvedor
-
-Rafael — Estudante de Análise e Desenvolvimento de Sistemas
-
-Projeto criado com fins educacionais, aplicando boas práticas de front-end e semântica HTML.
-
-📅 Ano
-
-2024 — ONG Brasil Esperança
