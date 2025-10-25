@@ -1,3 +1,5 @@
+
+
 /* ---------------------------
    MÓDULO 1: UTILIDADES / TEMPLATES
    --------------------------- */
@@ -58,8 +60,48 @@ const UI = (function () {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    return { showToast, initMenu, scrollToTop };
+    // <-- A FUNÇÃO FOI MOVIDA PARA ANTES DO RETURN -->
+    function initThemeToggle() {
+        const toggleButton = document.getElementById('theme-toggle');
+        if (!toggleButton) return;
+
+        const body = document.body;
+        const sunIcon = '☀️';
+        const moonIcon = '🌙';
+
+        // Função para aplicar o tema
+        function setTheme(theme) {
+            if (theme === 'dark') {
+                body.classList.add('dark-mode');
+                toggleButton.innerHTML = sunIcon; // Mostra sol no modo escuro
+                localStorage.setItem('theme', 'dark');
+            } else {
+                body.classList.remove('dark-mode');
+                toggleButton.innerHTML = moonIcon; // Mostra lua no modo claro
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Evento de clique no botão
+        toggleButton.addEventListener('click', () => {
+            const isDarkMode = body.classList.contains('dark-mode');
+            setTheme(isDarkMode ? 'light' : 'dark');
+        });
+
+        // Verifica a preferência salva ao carregar a página
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        setTheme(savedTheme);
+    }
+
+    // <-- ESTE É O ÚNICO RETURN, AGORA COM TUDO INCLUÍDO -->
+    return {
+        showToast,
+        initMenu,
+        scrollToTop,
+        initThemeToggle // Adicionado ao return original
+    };
 })();
+
 
 /* ---------------------------
    MÓDULO 3: FORMULÁRIO (validação)
@@ -261,7 +303,6 @@ const Router = (function () {
             </div>
         </section>
 
-        <!-- Seção com informações detalhadas sobre a ONG -->
         <section id="informacoes" class="informacoes">
             <h2>Informações:</h2>
             <div class="container">
@@ -315,11 +356,9 @@ const Router = (function () {
 
         <section id="projetos" class="projetos">
             <h2>Projetos:</h2>
-            <!-- Galeria de fotos responsivas (Imagens ilustrativas)-->
-           <div class="galeria-fotos" id="galeria-dinamica"> </div>
+            <div class="galeria-fotos" id="galeria-dinamica"> </div>
         </section>
 
-        <!-- Seção informando a localização da ONG -->
         <section id="localizacao" class="localizacao">
             <div class="container">
                 <h2>Localização</h2>
@@ -329,8 +368,7 @@ const Router = (function () {
                     <p>Email: contato@ongbrasilesperanca.com.br</p>
                 </div>
 
-                <div class="mapa"> <!-- Mapa incorporado do Google Maps -->
-                    <iframe
+                <div class="mapa"> <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14704.514710513371!2d-43.47014094458007!3d-22.8717045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99602a74114a15%3A0xb5d085b1ba398c06!2sONG%20Brasil%20Esperan%C3%A7a%20entregas%20de%20cestas!5e0!3m2!1spt-BR!2sbr!4v1760487815223!5m2!1spt-BR!2sbr"
                         width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -352,7 +390,6 @@ const Router = (function () {
 
 
         <section class="pagina-cadastro">
-            <!-- Formulário para fazer parte da ONG -->
             <form class="container-form" >
                 <fieldset class="container-formulario">
                     <legend>Dados Pessoais</legend>
@@ -361,16 +398,14 @@ const Router = (function () {
                         <input type="text" id="name" name="name" placeholder="Seu nome" >
                     </div>
                     <div>
-                        <label class="form" for="cpf">CPF:</label> <!-- Validação do CPF -->
-                        <input type="text" id="cpf" name="cpf" placeholder="Seu CPF">
+                        <label class="form" for="cpf">CPF:</label> <input type="text" id="cpf" name="cpf" placeholder="Seu CPF">
                     </div>
                     <div>
                         <label class="form" for="email">Email:</label>
                         <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com">
                     </div>
                     <div>
-                        <label class="form" for="telefone">Telefone:</label> <!-- Validação do Telefone -->
-                        <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX">
+                        <label class="form" for="telefone">Telefone:</label> <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX">
                     </div>
                     <div>
                         <label class="form" for="datanascimento">Data de Nascimento:</label>
@@ -378,7 +413,6 @@ const Router = (function () {
                     </div>
                 </fieldset>
 
-                <!-- Endereço -->
                 <fieldset class="container-endereco">
                     <legend>Endereço</legend>
                     <div>
@@ -395,7 +429,6 @@ const Router = (function () {
                     </div>
                 </fieldset>
 
-                <!-- Preferências -->
                 <fieldset class="radio">
                     <legend>Preferências</legend>
                     <div>
@@ -464,8 +497,7 @@ const Router = (function () {
                 </ul>
             </div>
         </section>
-        <div class="galeria-fotos"> <!-- Width e height para deixar o tamanho mais organizado no site -->
-            <img src="img/1.jpg" width="200" height="200" alt="Várias cestas básicas" loading="lazy">
+        <div class="galeria-fotos"> <img src="img/1.jpg" width="200" height="200" alt="Várias cestas básicas" loading="lazy">
             <img src="img/2.jpg" width="200" height="200" alt="Distribuição de cestas básicas" loading="lazy">
             <img src="img/3.jpg" width="200" height="200" alt="Acolhimento de pessoas em situação de rua"
                 loading="lazy">
@@ -592,6 +624,9 @@ const Router = (function () {
 
 // Ativa o menu hamburger em todas as páginas
 UI.initMenu();
+
+// Ativa o toggle de tema claro/escuro
+UI.initThemeToggle();
 
 // Ativa o Router. O Router agora é responsável por chamar o FormModule.init()
 Router.init();

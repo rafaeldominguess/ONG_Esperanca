@@ -662,7 +662,7 @@ div .localizacao-info p {
 
 .section a:hover {
     border-radius: 10px;
-    background-color: var(--cor-primaria);
+    background-color: var(--cor-fundo-claro);
     color: var(--cor-primaria);
 
 }
