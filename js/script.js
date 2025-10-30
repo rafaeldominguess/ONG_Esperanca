@@ -68,8 +68,8 @@ const UI = (function () {
         if (!toggleButton) return;
 
         const body = document.body;
-        const sunIcon = '☀️';
-        const moonIcon = '🌙';
+        const sunIcon = '🌙';
+        const moonIcon = '☀️';
 
         // Função para aplicar o tema
         function setTheme(theme) {

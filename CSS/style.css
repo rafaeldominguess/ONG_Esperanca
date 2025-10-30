@@ -1070,27 +1070,27 @@ body.dark-mode {
   /* Fundo de input escuro */
 
   /* Ajuste para elementos específicos que não usam variáveis */
-  background-color: var(--cor-fundo-claro);
+  background-color: rgba(0, 0, 0, 0.719);
 }
 
 /* Faz o .info-card ficar escuro */
 body.dark-mode .info-card {
-  background-color: var(--cor-primaria);
-  color: var(--cor-texto-principal);
+  background-color: #582508;
+  
 }
 
 /* Faz o formulário ficar escuro */
 body.dark-mode .container-formulario,
 body.dark-mode .container-endereco,
 body.dark-mode .radio {
-  background-color: var(--cor-secundaria-fundo);
+  background-color: #1f1f1f;
   color: var(--cor-texto-principal);
 }
 
 /* Faz o header/footer ficarem escuros */
 body.dark-mode header,
 body.dark-mode .footer {
-  background-color: var(--cor-primaria);
+  background-color: #1f1f1f;
   color: var(--cor-texto-principal);
 }
 
@@ -1103,15 +1103,13 @@ body.dark-mode #descricao-principal1 {
 
 /* Ajusta cor do menu hamburger */
 body.dark-mode .menu-toggle {
-  color: var(--cor-fundo-claro);
+  color: #1f1f1f;
 }
 
 /* Estilo do botão de alternar tema */
 .theme-toggle {
   background: none;
   border: none;
-  color: var(--cor-fundo-claro);
-  /* Cor do ícone */
   font-size: 1.5rem;
   /* Tamanho do ícone */
   cursor: pointer;
@@ -1123,13 +1121,11 @@ body.dark-mode .menu-toggle {
 }
 
 .theme-toggle:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgb(255, 255, 255);
 }
 
-/* Ajusta a cor do ícone no modo escuro */
-body.dark-mode .theme-toggle {
-  color: var(--cor-secundaria-destaque);
-  /* Amarelo mostarda */
+body.dark-mode h1,body.dark-mode h2,  body.dark-mode h3, body.dark-mode p, body.dark-mode li, body.dark-mode strong, body.dark-mode .tag, body.dark-mode a {
+  color: #b6b3b3;
 }
 
 /* Ajusta a posição no mobile */
